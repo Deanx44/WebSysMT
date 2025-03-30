@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GalleryHub- E-Learning Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="api.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="bi bi-book"></i> GalleryHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#quiz">Quick Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item" id="registerLink">
+                        <a class="nav-link" href="#register">Register</a>
+                    </li>
+                    <li class="nav-item" id="loginLink">
+                        <a class="nav-link" href="#login">Login</a>
+                    </li>
+                    <li class="nav-item d-none" id="profileLink">
+                        <a class="nav-link" href="#profile">My Profile</a>
+                    </li>
+                    <li class="nav-item d-none" id="logoutLink">
+                        <a class="nav-link" href="#" onclick="logout()">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 text-center">
+                    <h1 class="display-4">Welcome to GalleryHub</h1>
+                    <p class="lead">Your Gateway to Knowledge and Skills</p>
+                    <div class="mt-4">
+                        <a href="#courses" class="btn btn-light btn-lg me-2">Explore Courses</a>
+                        <a href="#register" class="btn btn-outline-light btn-lg">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-box p-4">
+                        <i class="bi bi-laptop fs-1 text-primary mb-3"></i>
+                        <h3>Online Courses</h3>
+                        <p>Access high-quality courses anytime, anywhere. Learn at your own pace.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-box p-4">
+                        <i class="bi bi-check2-square fs-1 text-primary mb-3"></i>
+                        <h3>Interactive Quizzes</h3>
+                        <p>Test your knowledge with our interactive quizzes and track your progress.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-box p-4">
+                        <i class="bi bi-journal-text fs-1 text-primary mb-3"></i>
+                        <h3>Educational Blog</h3>
+                        <p>Stay updated with the latest trends and insights in your field of interest.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Popular Courses</h2>
+            <div class="row g-4">
+                <!-- Course 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card course-card h-100">
+                        <img src="https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2014/07/Beginner_photography_tutorials1.jpg?fit=1000%2C956&ssl=1" class="card-img-top" alt="Photography">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="badge bg-primary">Beginner</span>
+                                <span class="course-rating"><i class="bi bi-star-fill text-warning"></i> 4.8</span>
+                            </div>
+                            <h3 class="card-title h5">Photography for Beginners</h3>
+                            <p class="card-text">As beginner photographers, we tend to be visual learners.</p>
+                        </div>
+                        <div class="card-footer bg-white border-top-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="course-lessons"><i class="bi bi-collection"></i> 12 Lessons</span>
+                                <a href="#" class="btn btn-outline-primary course-btn" data-course-id="1">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card course-card h-100">
+                        <img src="https://chicagophotoclasses.com/wp-content/uploads/2021/10/media_1584a31d0a312c0569b38f345bd8df45d8a3918ba.jpeg" class="card-img-top" alt="Lightroom">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="badge bg-warning">Intermediate</span>
+                                <span class="course-rating"><i class="bi bi-star-fill text-warning"></i> 4.9</span>
+                            </div>
+                            <h3 class="card-title h5">Introduction to Adobe Lightroom</h3>
+                            <p class="card-text">It's perfect for all levels of photography, starting with beginners. Lightroom is especially essential if you shoot in RAW, a far better file format to use than JPEG, as more detail is captured.</p>
+                        </div>
+                        <div class="card-footer bg-white border-top-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="course-lessons"><i class="bi bi-collection"></i> 10 Lessons</span>
+                                <a href="#" class="btn btn-outline-primary course-btn" data-course-id="2">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card course-card h-100">
+                        <img src="https://mttc.edu.my/mttc/mtskin/uploads/2023/03/PHOTOSHOP-ADVANCED_Artboard-26.png" class="card-img-top" alt="Photoshop">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="badge bg-primary">Beginner</span>
+                                <span class="course-rating"><i class="bi bi-star-fill text-warning"></i> 4.7</span>
+                            </div>
+                            <h3 class="card-title h5">Graphic Design Principles</h3>
+                            <p class="card-text">The best way to learn Adobe Photoshop is through a combination of structured learning and hands-on practice. Start with online tutorials or courses to grasp the fundamentals. Then, practice regularly by editing your own photos
+                                or engaging in creative projects.</p>
+                            <p class="card-text">Once you've mastered the basics, explore advanced topics like color theory, typography, and composition.</p>
+                        </div>
+                        <div class="card-footer bg-white border-top-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="course-lessons"><i class="bi bi-collection"></i> 10 Lessons</span>
+                                <a href="#" class="btn btn-outline-primary course-btn" data-course-id="3">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card course-card h-100">
+                        <img src="https://media.licdn.com/dms/image/v2/D5612AQHYzCm_bMFxqQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1729060154502?e=2147483647&v=beta&t=2wy0ZhNpACFJES7NE9rezZPW_m9F3RQEuJh__-tEfR8" class="card-img-top" alt="Illustrator">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="badge bg-primary">Beginner to Intermediate</span>
+                                <span class="course-rating"><i class="bi bi-star-fill text-warning"></i> 4.6</span>
+                            </div>
+                            <h3 class="card-title h5">Adobe Illustrator</h3>
+                            <p class="card-text">Adobe Illustrator is a vector graphics editor used for creating scalable logos, illustrations, icons, and other graphics for print and digital media, ensuring designs maintain quality regardless of size. .</p>
+                        </div>
+                        <div class="card-footer bg-white border-top-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="course-lessons"><i class="bi bi-collection"></i> 14 Lessons</span>
+                                <a href="#" class="btn btn-outline-primary course-btn" data-course-id="4">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card course-card h-100">
+                        <img src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/274175500/original/cda4262d149d8fef9701dfec5f59bf110ea5b592/design-ui-ux-website-dashboard-and-mobile-app.png" class="card-img-top" alt="UI/UX">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="badge bg-warning">Intermediate</span>
+                                <span class="course-rating"><i class="bi bi-star-fill text-warning"></i> 4.8</span>
+                            </div>
+                            <h3 class="card-title h5">UI/UX Design</h3>
+                            <p class="card-text">User experience (UX) and user interface (UI) design are two crucial components of creating a successful website or application. UX design focuses on the user's overall experience when interacting with a product, while UI design
+                                deals explicitly with the visual and interactive elements of the product</p>
+                        </div>
+                        <div class="card-footer bg-white border-top-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="course-lessons"><i class="bi bi-collection"></i> 16 Lessons</span>
+                                <a href="#" class="btn btn-outline-primary course-btn" data-course-id="5">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card course-card h-100">
+                        <img src="https://img-c.udemycdn.com/course/750x422/5140572_9a8d_4.jpg" class="card-img-top" alt="Drone">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="badge bg-primary">Beginner</span>
+                                <span class="course-rating"><i class="bi bi-star-fill text-warning"></i> 4.7</span>
+                            </div>
+                            <h3 class="card-title h5">Drone/Aerial Pilot</h3>
+                            <p class="card-text">Drones have two basic functions: flight mode and navigation. To fly, drones must have a power source, such as a battery or fuel. They also commonly have rotors, propellers or wings and a frame. The frame of a drone is typically
+                                made of a lightweight, composite material to reduce weight and increase maneuverability.</p>
+                        </div>
+                        <div class="card-footer bg-white border-top-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="course-lessons"><i class="bi bi-collection"></i> 12 Lessons</span>
+                                <a href="#" class="btn btn-outline-primary course-btn" data-course-id="6">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Test Your Knowledge</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div id="quiz-container" class="card shadow-sm border-0 rounded-3 overflow-hidden">
+                        <div class="card-header bg-primary bg-gradient text-white d-flex justify-content-between align-items-center py-3">
+                            <h5 class="mb-0">Quick Quiz</h5>
+                            <div id="timer" class="badge bg-light text-dark rounded-pill px-3 py-2">
+                                <i class="bi bi-clock me-1"></i>Time Left: <span id="time-counter">30</span>s
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="quiz-progress mb-3">
+                                <div class="progress" style="height: 8px;">
+                                    <div id="quiz-progress-bar" class="progress-bar bg-success" role="progressbar" style="width: 0%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between mt-1">
+                                    <small class="text-muted">Question <span id="current-question-num">1</span>/<span id="total-questions">5</span></small>
+                                    <small class="text-muted">Score: <span id="current-score">0</span></small>
+                                </div>
+                            </div>
+                            <h3 id="question" class="mb-4 fs-5 fs-md-4"></h3>
+                            <div id="options" class="d-grid gap-2"></div>
+                        </div>
+                    </div>
+
+                    <!-- Quiz Results (initially hidden) -->
+                    <div id="quiz-results" class="card shadow-sm border-0 rounded-3 mt-4 d-none">
+                        <div class="card-body text-center p-4">
+                            <div class="result-icon mb-3">
+                                <i class="bi bi-trophy-fill text-warning" style="font-size: 3rem;"></i>
+                            </div>
+                            <h3 class="result-title mb-3">Quiz Completed!</h3>
+                            <div class="result-score mb-3">
+                                <div class="display-4 fw-bold text-primary" id="final-score">0/5</div>
+                                <p class="text-muted" id="score-message">Good effort!</p>
+                            </div>
+                            <button class="btn btn-primary px-4 py-2" onclick="restartQuiz()">
+                            <i class="bi bi-arrow-repeat me-2"></i>Take Quiz Again
+                        </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Array of quiz questions with options and the correct answer index
+        const quizData = [{
+            question: "What does HTML stand for?",
+            options: ["Hyper Text Markup Language", "Home Tool Markup Language", "Hyperlinks and Text Markup Language"],
+            answer: 0 // Correct answer is the first option (index 0)
+        }, {
+            question: "What does CSS stand for?",
+            options: ["Computer Style Sheets", "Creative Style System", "Cascading Style Sheets"],
+            answer: 2 // Correct answer is the third option (index 2)
+        }, {
+            question: "What does JS stand for?",
+            options: ["JavaSyntax", "JavaScript", "JustScript"],
+            answer: 1 // Correct answer is the second option (index 1)
+        }, {
+            question: "What does PS stand for in Adobe PS?",
+            options: ["PhotoShell", "PhotoShop", "PhotoSell"],
+            answer: 1 // Correct answer is the second option (index 1)
+        }, {
+            question: "What does PX stand for in image dimensions?",
+            options: ["Pixel", "Photon", "Pexel"],
+            answer: 0 // Correct answer is the first option (index 0)
+        }];
+
+        // Variables to track current question, score, and timer
+        let currentQuestion = 0; // Keeps track of which question is displayed
+        let score = 0; // Stores the number of correct answers
+        let timer; // Stores the reference for the countdown timer
+        let timeLeft = 30; // Time in seconds for each question
+
+        // Start the quiz when the page loads
+        window.onload = startQuiz;
+
+        // Function to initialize the quiz
+        function startQuiz() {
+            // Reset variables
+            currentQuestion = 0;
+            score = 0;
+
+            // Update total questions display
+            document.getElementById("total-questions").textContent = quizData.length;
+
+            // Hide results and show quiz container
+            document.getElementById("quiz-results").classList.add("d-none");
+            document.getElementById("quiz-container").classList.remove("d-none");
+
+            // Load the first question
+            loadQuestion();
+        }
+
+        // Function to load a question
+        function loadQuestion() {
+            // Check if we have reached the end of the quiz
+            if (currentQuestion >= quizData.length) {
+                showResults();
+                return; // Stop further execution
+            }
+
+            // Update question counter
+            document.getElementById("current-question-num").textContent = currentQuestion + 1;
+
+            // Update progress bar
+            const progressPercentage = (currentQuestion / quizData.length) * 100;
+            document.getElementById("quiz-progress-bar").style.width = `${progressPercentage}%`;
+
+            // Reset timer for the new question
+            clearInterval(timer); // Clear any previous timer
+            timeLeft = 30; // Reset time for the new question
+            document.getElementById("time-counter").textContent = timeLeft;
+
+            // Start countdown timer with visual feedback
+            timer = setInterval(() => {
+                timeLeft--; // Reduce time by 1 second
+                document.getElementById("time-counter").textContent = timeLeft;
+
+                // Add visual urgency when time is running low
+                if (timeLeft <= 10) {
+                    document.getElementById("timer").classList.add("bg-danger", "text-white");
+                    document.getElementById("timer").classList.remove("bg-light", "text-dark");
+                } else {
+                    document.getElementById("timer").classList.add("bg-light", "text-dark");
+                    document.getElementById("timer").classList.remove("bg-danger", "text-white");
+                }
+
+                // If time reaches zero, move to the next question
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    nextQuestion(); // Automatically load next question
+                }
+            }, 1000); // Runs every 1 second
+
+            // Get the current question object
+            let questionObj = quizData[currentQuestion];
+
+            // Display the question in the HTML
+            document.getElementById("question").innerText = questionObj.question;
+
+            // Get the options container and clear previous options
+            let optionsContainer = document.getElementById("options");
+            optionsContainer.innerHTML = "";
+
+            // Loop through all answer choices and create buttons for each
+            questionObj.options.forEach((option, index) => {
+                let button = document.createElement("button");
+                button.innerText = option; // Set button text
+                button.classList.add("btn", "btn-outline-primary", "text-start", "p-3", "rounded-3"); // Add Bootstrap styling
+                button.onclick = () => checkAnswer(index, button); // Set click event to check answer
+                optionsContainer.appendChild(button); // Add button to the options container
+            });
+
+            // Update current score display
+            document.getElementById("current-score").textContent = score;
+        }
+
+        // Function to check the user's selected answer
+        function checkAnswer(selected, buttonElement) {
+            // Disable all buttons to prevent multiple answers
+            const buttons = document.querySelectorAll("#options button");
+            buttons.forEach(btn => btn.disabled = true);
+
+            let correct = quizData[currentQuestion].answer; // Get the correct answer index
+
+            // Highlight the correct answer and the user's selection
+            buttons[correct].classList.remove("btn-outline-primary");
+            buttons[correct].classList.add("btn-success");
+
+            // If the selected answer is correct, increase the score
+            if (selected === correct) {
+                score++;
+                document.getElementById("current-score").textContent = score;
+            } else {
+                // Highlight the wrong answer
+                buttonElement.classList.remove("btn-outline-primary");
+                buttonElement.classList.add("btn-danger");
+            }
+
+            // Pause briefly to show the correct/incorrect answer
+            clearInterval(timer);
+            setTimeout(() => {
+                nextQuestion();
+            }, 1000);
+        }
+
+        // Function to move to the next question
+        function nextQuestion() {
+            currentQuestion++; // Increment question index
+            loadQuestion(); // Load the next question
+        }
+
+        // Function to show quiz results
+        function showResults() {
+            // Hide quiz container and show results
+            document.getElementById("quiz-container").classList.add("d-none");
+            document.getElementById("quiz-results").classList.remove("d-none");
+
+            // Update score display
+            document.getElementById("final-score").textContent = `${score}/${quizData.length}`;
+
+            // Set appropriate message based on score
+            const percentage = (score / quizData.length) * 100;
+            let message = "";
+            let iconClass = "bi-trophy-fill text-warning";
+
+            if (percentage >= 80) {
+                message = "Excellent!";
+                iconClass = "bi-trophy-fill text-warning";
+            } else if (percentage >= 60) {
+                message = "Good job! You know your stuff!";
+                iconClass = "bi-hand-thumbs-up-fill text-success";
+            } else if (percentage >= 40) {
+                message = "Not bad! Keep learning!";
+                iconClass = "bi-lightbulb-fill text-primary";
+            } else {
+                message = "Keep practicing! You'll get better!";
+                iconClass = "bi-book-fill text-info";
+            }
+
+            document.getElementById("score-message").textContent = message;
+            document.querySelector(".result-icon i").className = `bi ${iconClass}`;
+
+            // Store the score in local storage and update progress if user is logged in
+            localStorage.setItem("quizScore", score);
+            updateQuizProgress(score);
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            score = 0;
+
+            // Reset quiz container to original structure
+            document.getElementById("quiz-progress-bar").style.width = "0%";
+            document.getElementById("current-question-num").textContent = "1";
+            document.getElementById("current-score").textContent = "0";
+
+            // Clear any existing timer
+            clearInterval(timer);
+
+            // Restart the quiz
+            startQuiz();
+        }
+    </script>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Educational Articles</h2>
+            <div class="row g-4">
+                <!-- Article 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card blog-card h-100">
+                        <img src="https://miro.medium.com/v2/resize:fit:1200/1*KnFMl1DIaftXOuedz-JefA.png" class="card-img-top" alt="Web Development Trends">
+                        <div class="card-body">
+                            <div class="blog-meta mb-2">
+                                <span class="blog-date"><i class="bi bi-calendar3"></i> March 15, 2023</span>
+                                <span class="blog-category ms-3"><i class="bi bi-tag"></i> Web Development</span>
+                            </div>
+                            <h3 class="card-title h5">Top Web Development Trends in 2023</h3>
+                            <p class="card-text">Explore the latest technologies and frameworks that are shaping the future of web development.</p>
+                            <a href="#" class="btn btn-link p-0">Read More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card blog-card h-100">
+                        <img src="https://cdn.atomisystems.com/uploads/2023/04/ai-tool-thumb.png" class="card-img-top" alt="AI in Education">
+                        <div class="card-body">
+                            <div class="blog-meta mb-2">
+                                <span class="blog-date"><i class="bi bi-calendar3"></i> April 2, 2023</span>
+                                <span class="blog-category ms-3"><i class="bi bi-tag"></i> Education</span>
+                            </div>
+                            <h3 class="card-title h5">How AI is Transforming Online Education</h3>
+                            <p class="card-text">Discover how artificial intelligence is personalizing learning experiences and improving educational outcomes.</p>
+                            <a href="#" class="btn btn-link p-0">Read More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card blog-card h-100">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1UkkWlpkqqKtGxXUtxHoRn1wNwCZ2pI1A7QGPYUU6s-vkgzqoqI_IN4mLII2pGMgvD5Q&usqp=CAU" class="card-img-top" alt="UX Design Tips">
+                        <div class="card-body">
+                            <div class="blog-meta mb-2">
+                                <span class="blog-date"><i class="bi bi-calendar3"></i> May 10, 2023</span>
+                                <span class="blog-category ms-3"><i class="bi bi-tag"></i> Design</span>
+                            </div>
+                            <h3 class="card-title h5">Essential UX Design Principles for Beginners</h3>
+                            <p class="card-text">Learn the fundamental principles of user experience design that will help you create more intuitive interfaces.</p>
+                            <a href="#" class="btn btn-link p-0">Read More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card blog-card h-100">
+                        <img src="https://images.kinguin.net/g/carousel-main-mobile/media/images/products/_PythonProgrammingMachineLearning-sc.jpg" class="card-img-top" alt="Python Programming">
+                        <div class="card-body">
+                            <div class="blog-meta mb-2">
+                                <span class="blog-date"><i class="bi bi-calendar3"></i> June 5, 2023</span>
+                                <span class="blog-category ms-3"><i class="bi bi-tag"></i> Programming</span>
+                            </div>
+                            <h3 class="card-title h5">Python Programming: From Basics to Advanced</h3>
+                            <p class="card-text">A comprehensive guide to mastering Python programming language for beginners and intermediate learners.</p>
+                            <a href="#" class="btn btn-link p-0">Read More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card blog-card h-100">
+                        <img src="https://elearningindustry.com/wp-content/uploads/2022/01/shutterstock_525008128.jpg" class="card-img-top" alt="Remote Learning">
+                        <div class="card-body">
+                            <div class="blog-meta mb-2">
+                                <span class="blog-date"><i class="bi bi-calendar3"></i> July 12, 2023</span>
+                                <span class="blog-category ms-3"><i class="bi bi-tag"></i> Education</span>
+                            </div>
+                            <h3 class="card-title h5">Effective Strategies for Remote Learning</h3>
+                            <p class="card-text">Tips and techniques to maximize productivity and learning outcomes in remote educational settings.</p>
+                            <a href="#" class="btn btn-link p-0">Read More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card blog-card h-100">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUyzRkefs-zHTSKHlClzhI4DUOx47OB7vXthudZ2tJ-JmJceg953su-dgn9wlkRgRKNg8&usqp=CAU" class="card-img-top" alt="Digital Marketing">
+                        <div class="card-body">
+                            <div class="blog-meta mb-2">
+                                <span class="blog-date"><i class="bi bi-calendar3"></i> August 8, 2023</span>
+                                <span class="blog-category ms-3"><i class="bi bi-tag"></i> Marketing</span>
+                            </div>
+                            <h3 class="card-title h5">Digital Marketing Fundamentals for 2023</h3>
+                            <p class="card-text">Learn the essential digital marketing strategies and tools that every marketer should know in 2023.</p>
+                            <a href="#" class="btn btn-link p-0">Read More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register" class="py-5 bg-light d-none">
+        <div class="container">
+            <h2 class="text-center mb-4">Create Your Account</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <form id="registrationForm">
+                        <div class="mb-3">
+                            <label for="regName" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="regName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="regEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="regEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="regPassword" class="form-label">Password (minimum 8 characters required and atleast one special character)</label>
+                            <input type="password" class="form-control" id="regPassword" required minlength="6">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Register</button>
+                        <p class="text-center mt-3">
+                            Already have an account? <a href="#login" class="text-decoration-none">Login here</a>
+                        </p>
+                    </form>
+                    <div id="regMessage" class="mt-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" class="py-5 d-none">
+        <div class="container">
+            <h2 class="text-center mb-4">Login to Your Account</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                        <p class="text-center mt-3">
+                            Don't have an account? <a href="#register" class="text-decoration-none">Register here</a>
+                        </p>
+                    </form>
+                    <div id="loginMessage" class="mt-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="py-5 bg-light d-none">
+        <div class="container">
+            <h2 class="text-center mb-4">Your Learning Dashboard</h2>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title h5 mb-3">Profile Information</h3>
+                            <div class="text-center mb-3">
+                                <div class="profile-image-container">
+                                    <img id="profileImage" src="https://cdn-icons-png.freepik.com/512/4226/4226726.png" class="mb-3" alt="Profile Picture">
+                                </div>
+                            </div>
+                            <div id="profileInfo">
+                                <p class="mb-2"><strong>Username:</strong> <span id="profileUsername"></span></p>
+                                <p class="mb-2"><strong>Email:</strong> <span id="profileEmail"></span></p>
+                                <p class="mb-2"><strong>Member Since:</strong> <span id="memberSince"></span></p>
+                            </div>
+                            <button class="btn btn-outline-primary btn-sm mt-3 w-100" data-bs-toggle="collapse" data-bs-target="#updateProfileForm">
+                            Edit Profile
+                        </button>
+                            <div class="collapse mt-3" id="updateProfileForm">
+                                <form id="profileUpdateForm">
+                                    <div class="mb-3">
+                                        <label for="profilePicture" class="form-label">Update Profile Picture</label>
+                                        <input type="file" class="form-control" id="profilePicture" accept="image/*">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="updateUsername" class="form-label">Update Username</label>
+                                        <input type="text" class="form-control" id="updateUsername">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="updatePassword" class="form-label">New Password (leave blank to keep current)</label>
+                                        <input type="password" class="form-control" id="updatePassword">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-sm w-100">Update Profile</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title h5 mb-3">Your Progress</h3>
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4 text-center mb-3">
+                                    <div class="progress-circle mx-auto">
+                                        <span id="coursesProgress">0%</span>
+                                    </div>
+                                    <p class="mt-2">Courses Completed</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 text-center mb-3">
+                                    <div class="progress-circle mx-auto">
+                                        <span id="quizzesProgress">0%</span>
+                                    </div>
+                                    <p class="mt-2">Quizzes Passed</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 text-center mb-3">
+                                    <div class="progress-circle mx-auto">
+                                        <span id="pointsEarned">0</span>
+                                    </div>
+                                    <p class="mt-2">Points Earned</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title h5 mb-3">Enrolled Courses</h3>
+                            <div id="enrolledCourses" class="list-group">
+                                <p class="text-center text-muted" id="noCoursesMessage">You haven't enrolled in any courses yet.</p>
+                                <!-- Enrolled courses will be displayed here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white py-4">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5><i class="bi bi-book"></i> GalleryHub</h5>
+                    <p class="text-white">Your gateway to knowledge and skills. Learn at your own pace with our comprehensive courses and interactive quizzes.</p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled text-white">
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> info@galleryhub.edu.ph.com</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> +1 (555) 123-4567</li>
+                        <li><i class="bi bi-geo-alt me-2"></i> 911 Tenga-Tenga St, Cuyo, Palawan, 5318</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5>Subscribe</h5>
+                    <p class="text-white">Get updates on new courses and features</p>
+                    <form class="d-flex">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-light" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Gallery Hub. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // User Authentication System
+        const authConfig = {
+            usersKey: 'websiteUsers',
+            currentUserKey: 'currentUser'
+        };
+
+        // Initialize users array if not exists
+        if (!localStorage.getItem(authConfig.usersKey)) {
+            localStorage.setItem(authConfig.usersKey, JSON.stringify([]));
+        }
+
+        // Navigation Control
+        function updateNavbar() {
+            const isLoggedIn = localStorage.getItem(authConfig.currentUserKey);
+            document.getElementById('registerLink').classList.toggle('d-none', isLoggedIn);
+            document.getElementById('loginLink').classList.toggle('d-none', isLoggedIn);
+            document.getElementById('profileLink').classList.toggle('d-none', !isLoggedIn);
+            document.getElementById('logoutLink').classList.toggle('d-none', !isLoggedIn);
+        }
+
+        // Registration Handler
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const users = JSON.parse(localStorage.getItem(authConfig.usersKey));
+            const newUser = {
+                username: document.getElementById('regName').value.trim(),
+                email: document.getElementById('regEmail').value.trim().toLowerCase(),
+                password: document.getElementById('regPassword').value
+            };
+
+            // Validation
+            if (users.some(user => user.email === newUser.email)) {
+                document.getElementById('regMessage').innerHTML = '<div class="alert alert-danger">Email already exists!</div>';
+                return;
+            }
+
+            users.push(newUser);
+            localStorage.setItem(authConfig.usersKey, JSON.stringify(users));
+            document.getElementById('regMessage').innerHTML = '<div class="alert alert-success">Registration successful! Please login.</div>';
+            this.reset();
+        });
+
+        // Login Handler
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const users = JSON.parse(localStorage.getItem(authConfig.usersKey));
+            const email = document.getElementById('loginEmail').value.trim().toLowerCase();
+            const password = document.getElementById('loginPassword').value;
+
+            const user = users.find(u => u.email === email && u.password === password);
+            if (user) {
+                localStorage.setItem(authConfig.currentUserKey, JSON.stringify(user));
+                updateNavbar();
+                showSection('profile');
+                loadProfile();
+                document.getElementById('loginMessage').innerHTML = '';
+            } else {
+                document.getElementById('loginMessage').innerHTML = '<div class="alert alert-danger">Invalid credentials!</div>';
+            }
+            this.reset();
+        });
+
+        // Profile Management
+        function loadProfile() {
+            const user = JSON.parse(localStorage.getItem(authConfig.currentUserKey));
+            if (user) {
+                document.getElementById('profileUsername').textContent = user.username;
+                document.getElementById('profileEmail').textContent = user.email;
+                document.getElementById('updateUsername').value = user.username;
+
+                // Update profile picture if exists
+                if (user.profilePicture) {
+                    document.getElementById('profileImage').src = user.profilePicture;
+                }
+
+                // Add member since date if not exists
+                if (!user.memberSince) {
+                    user.memberSince = new Date().toLocaleDateString();
+                    localStorage.setItem(authConfig.currentUserKey, JSON.stringify(user));
+                }
+                document.getElementById('memberSince').textContent = user.memberSince;
+
+                // Update progress
+                updateProgress();
+            }
+        }
+
+        // Profile picture update handler
+        document.getElementById('profilePicture').addEventListener('change', async function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                try {
+                    // Check file size - limit to 2MB
+                    if (file.size > 2 * 1024 * 1024) {
+                        showUpdateMessage('Image size should be less than 2MB', 'danger');
+                        return;
+                    }
+
+                    const reader = new FileReader();
+                    reader.onload = async function(e) {
+                        const imageUrl = e.target.result;
+                        document.getElementById('profileImage').src = imageUrl;
+
+                        // Update user profile
+                        const currentUser = JSON.parse(localStorage.getItem(authConfig.currentUserKey));
+                        currentUser.profilePicture = imageUrl;
+
+                        // Update in both storage locations
+                        localStorage.setItem(authConfig.currentUserKey, JSON.stringify(currentUser));
+
+                        const users = JSON.parse(localStorage.getItem(authConfig.usersKey));
+                        const userIndex = users.findIndex(u => u.email === currentUser.email);
+                        if (userIndex !== -1) {
+                            users[userIndex].profilePicture = imageUrl;
+                            localStorage.setItem(authConfig.usersKey, JSON.stringify(users));
+                            showUpdateMessage('Profile picture updated successfully!', 'success');
+                        }
+                    };
+                    reader.readAsDataURL(file);
+                } catch (error) {
+                    console.error('Error updating profile picture:', error);
+                    showUpdateMessage('Error updating profile picture', 'danger');
+                }
+            }
+        });
+
+        // Update Profile Handler
+        document.getElementById('profileUpdateForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const users = JSON.parse(localStorage.getItem(authConfig.usersKey));
+            const currentUser = JSON.parse(localStorage.getItem(authConfig.currentUserKey));
+
+            // Get form values
+            const newUsername = document.getElementById('updateUsername').value.trim();
+            const newPassword = document.getElementById('updatePassword').value;
+
+            // Validate username
+            if (!newUsername) {
+                showUpdateMessage('Username cannot be empty!', 'danger');
+                return;
+            }
+
+            // Create updated user object
+            const updatedUser = {
+                ...currentUser,
+                username: newUsername,
+                password: newPassword || currentUser.password
+            };
+
+            // Update users array
+            const index = users.findIndex(u => u.email === currentUser.email);
+            if (index !== -1) {
+                users[index] = updatedUser;
+                localStorage.setItem(authConfig.usersKey, JSON.stringify(users));
+                localStorage.setItem(authConfig.currentUserKey, JSON.stringify(updatedUser));
+
+                showUpdateMessage('Profile updated successfully!', 'success');
+                loadProfile();
+                this.reset();
+
+                // Close collapse after successful update
+                bootstrap.Collapse.getInstance(document.getElementById('updateProfileForm')).hide();
+            }
+        });
+
+        // Helper function to show update messages
+        function showUpdateMessage(message, type) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `alert alert-${type} mt-3`;
+            messageDiv.textContent = message;
+
+            const form = document.getElementById('profileUpdateForm');
+            form.appendChild(messageDiv);
+
+            setTimeout(() => messageDiv.remove(), 3000);
+        }
+
+        // Logout Function
+        function logout() {
+            localStorage.removeItem(authConfig.currentUserKey);
+            updateNavbar();
+            window.location.hash = '#home';
+        }
+
+        // Section Visibility Control
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.toggle('d-none', section.id !== sectionId);
+            });
+        }
+
+        // Initialize on page load
+        updateNavbar();
+        window.addEventListener('hashchange', () => {
+            const currentUser = localStorage.getItem(authConfig.currentUserKey);
+            const section = window.location.hash.substring(1);
+
+            if ((section === 'profile' || section === 'update') && !currentUser) {
+                window.location.hash = '#login';
+                return;
+            }
+
+            showSection(section);
+        });
+        // Progress tracking functions
+        function updateProgress() {
+            const currentUser = JSON.parse(localStorage.getItem(authConfig.currentUserKey));
+            if (!currentUser) return;
+
+            // Initialize progress data if not exists
+            if (!currentUser.progress) {
+                currentUser.progress = {
+                    coursesCompleted: 0,
+                    totalCourses: 6, // Total number of courses
+                    quizzesPassed: 0,
+                    totalQuizzes: 5, // Total number of quizzes
+                    pointsEarned: 0
+                };
+                localStorage.setItem(authConfig.currentUserKey, JSON.stringify(currentUser));
+            }
+
+            // Calculate percentages
+            const coursesPercent = Math.round((currentUser.progress.coursesCompleted / currentUser.progress.totalCourses) * 100);
+            const quizzesPercent = Math.round((currentUser.progress.quizzesPassed / currentUser.progress.totalQuizzes) * 100);
+
+            // Update progress circles
+            updateProgressCircle('coursesProgress', coursesPercent);
+            updateProgressCircle('quizzesProgress', quizzesPercent);
+            document.getElementById('pointsEarned').textContent = currentUser.progress.pointsEarned;
+        }
+
+        function updateProgressCircle(elementId, percent) {
+            const element = document.getElementById(elementId);
+            element.textContent = percent + '%';
+            element.parentElement.style.setProperty('--progress-rotation', (percent * 3.6) + 'deg');
+        }
+
+        // Add quiz completion tracking
+        function updateQuizProgress(score) {
+            const currentUser = JSON.parse(localStorage.getItem(authConfig.currentUserKey));
+            if (!currentUser) return;
+
+            if (!currentUser.progress) {
+                currentUser.progress = {
+                    coursesCompleted: 0,
+                    totalCourses: 6,
+                    quizzesPassed: 0,
+                    totalQuizzes: 5,
+                    pointsEarned: 0
+                };
+            }
+
+            // Consider quiz passed if score is 60% or higher
+            if ((score / quizData.length) >= 0.6) {
+                currentUser.progress.quizzesPassed++;
+                currentUser.progress.pointsEarned += score * 10; // 10 points per correct answer
+            }
+
+            localStorage.setItem(authConfig.currentUserKey, JSON.stringify(currentUser));
+            updateProgress();
+        }
+
+        // Add course completion tracking
+        function updateCourseProgress(courseId) {
+            const currentUser = JSON.parse(localStorage.getItem(authConfig.currentUserKey));
+            if (!currentUser) return;
+
+            if (!currentUser.progress) {
+                currentUser.progress = {
+                    coursesCompleted: 0,
+                    totalCourses: 6,
+                    quizzesPassed: 0,
+                    totalQuizzes: 5,
+                    pointsEarned: 0
+                };
+            }
+
+            if (!currentUser.completedCourses) {
+                currentUser.completedCourses = [];
+            }
+
+            if (!currentUser.completedCourses.includes(courseId)) {
+                currentUser.completedCourses.push(courseId);
+                currentUser.progress.coursesCompleted++;
+                currentUser.progress.pointsEarned += 100; // 100 points per course completion
+            }
+
+            localStorage.setItem(authConfig.currentUserKey, JSON.stringify(currentUser));
+            updateProgress();
+        }
+
+        // Modify your existing loadProfile function to include progress update
+        function loadProfile() {
+            const user = JSON.parse(localStorage.getItem(authConfig.currentUserKey));
+            if (user) {
+                document.getElementById('profileUsername').textContent = user.username;
+                document.getElementById('profileEmail').textContent = user.email;
+                document.getElementById('updateUsername').value = user.username;
+
+                if (!user.memberSince) {
+                    user.memberSince = new Date().toLocaleDateString();
+                    localStorage.setItem(authConfig.currentUserKey, JSON.stringify(user));
+                }
+                document.getElementById('memberSince').textContent = user.memberSince;
+
+                // Update progress
+                updateProgress();
+            }
+        }
+
+        // Add this to your quiz completion handler
+        function checkAnswer(selected) {
+            let correct = quizData[currentQuestion].answer;
+            if (selected === correct) {
+                score++;
+            }
+
+            if (currentQuestion === quizData.length - 1) {
+                updateQuizProgress(score);
+            }
+
+            nextQuestion();
+        }
+
+        document.querySelectorAll('.course-btn').forEach(button => {
+                    button.addEventListener('click', async function(e) {
+                                e.preventDefault();
+                                const courseId = this.dataset.courseId;
+
+                                // Get course details from API
+                                const courseDetails = await APIService.getCourseDetails(courseId);
+                                if (courseDetails) {
+                                    // Update course progress
+                                    updateCourseProgress(courseId);
+
+                                    // Get course comments
+                                    const comments = await APIService.getCourseComments(courseId);
+
+                                    // Update UI
+                                    this.textContent = 'Enrolled';
+                                    this.classList.remove('btn-outline-primary');
+                                    this.classList.add('btn-success');
+                                    this.disabled = true;
+
+                                    // Add comments section if it doesn't exist
+                                    const courseCard = this.closest('.course-card');
+                                    if (!courseCard.querySelector('.course-comments')) {
+                                        const commentsSection = document.createElement('div');
+                                        commentsSection.className = 'course-comments mt-3';
+                                        commentsSection.innerHTML = `
+                    <h6>Course Comments (${comments.length})</h6>
+                    <div class="list-group">
+                        ${comments.map(comment => `
+                            <div class="list-group-item">
+                                <h6 class="mb-1">${comment.name}</h6>
+                                <p class="mb-1">${comment.body}</p>
+                                <small class="text-muted">${comment.email}</small>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                courseCard.querySelector('.card-body').appendChild(commentsSection);
+            }
+        }
+    });
+});
+// Update course progress tracking
+async function updateCourseProgress(courseId) {
+    const currentUser = JSON.parse(localStorage.getItem(authConfig.currentUserKey));
+    if (!currentUser) return;
+
+    try {
+        // Get progress from API
+        const progress = await APIService.getCourseProgress(currentUser.id, courseId);
+        
+        if (!currentUser.progress) {
+            currentUser.progress = {
+                coursesCompleted: 0,
+                totalCourses: 6,
+                quizzesPassed: 0,
+                totalQuizzes: 5,
+                pointsEarned: 0
+            };
+        }
+
+        if (progress.completed && !currentUser.completedCourses?.includes(courseId)) {
+            currentUser.completedCourses = currentUser.completedCourses || [];
+            currentUser.completedCourses.push(courseId);
+            currentUser.progress.coursesCompleted++;
+            currentUser.progress.pointsEarned += 100;
+        }
+
+        localStorage.setItem(authConfig.currentUserKey, JSON.stringify(currentUser));
+        updateProgress();
+    } catch (error) {
+        console.error('Error updating course progress:', error);
+    }
+}
+    </script>
+</body>
+
+</html>
