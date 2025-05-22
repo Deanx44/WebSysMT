@@ -1,21 +1,34 @@
-
-
-
-
-
-
-
-
-
-
-
-
 # 🎓 WebSysMT / Midterm Project: E-Learning Platform
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 A modern e-learning platform designed to deliver interactive courses, quizzes, and educational content with a polished user experience.
@@ -53,6 +66,7 @@ A modern e-learning platform designed to deliver interactive courses, quizzes, a
 | Component       | Technology                          |
 |-----------------|-------------------------------------|
 | Frontend        | HTML5, CSS3, JavaScript            |
+| Backend         | PHP 8+                             |
 | UI Framework    | Bootstrap 5                         |
-| Authentication  | Local Storage (Temporary)          |
-| Data Management | JSON-based Temporary API           
+| Authentication  | Session-based (PHP)                |
+| Data Management | MySQL + Custom PHP API             |
